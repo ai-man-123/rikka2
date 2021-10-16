@@ -1,0 +1,98 @@
+let handler = async (m, { conn, usedPrefix, command, text, args, isROwner, isAdmin }) => {
+  let isEnable = /true|enable|(turn)?on/i.test(command)
+  let chat = global.DATABASE.data.chats[m.chat]
+  let user = global.DATABASE.data.users[m.sender]
+  let type = (args[0] || '').toLowerCase()
+  let isAll = false
+  let isUser = false
+  switch (type) {
+    case 'welcome':
+      chat.welcome = isEnable
+      break
+      case 'nsfw':
+      if (!isAdmin) {
+        global.dfail('admin', m, conn)
+        throw false
+      }
+      chat.nsfw = isEnable
+      break
+      case 'antihidetag':
+      if (!isAdmin) {
+        global.dfail('admin', m, conn)
+        throw false
+      }
+      chat.antihidetag = isEnable
+      break
+      case 'antinsfw':
+      if (!isAdmin) {
+        global.dfail('admin', m, conn)
+        throw false
+      }
+      chat.antinsfw = isEnable
+      break
+    case 'detect':
+      if (!isAdmin) {
+        global.dfail('admin', m, conn)
+        throw false
+      }
+      chat.detect = isEnable
+      break
+    case 'delete':
+      chat.delete = isEnable
+      break
+    case 'simi':
+      chat.simi = isEnable
+      break
+    case 'antidelete':
+      chat.delete = !isEnable
+      break
+    case 'public':
+      isAll = true
+      if (!isROwner) {
+        global.dfail('rowner', m, conn)
+        throw false
+      }
+      global.opts['self'] = !isEnable
+      break
+      case 'restrict':
+      isAll = true
+      if (!isROwner) {
+        global.dfail('rowner', m, conn)
+        throw false
+      }
+      global.opts['restrict'] = isEnable
+      break
+    case 'antilink':
+      chat.antiLink = isEnable
+      break
+    /*case 'autolevelup':
+      isUser = true
+      user.autolevelup = isEnable
+      break*/
+    default:
+      return m.reply(`
+List option: 
+- welcome 
+- delete 
+- public (ownerbot only)
+- antilink 
+- detect
+(admin group only)
+- restrict (ownerbot only)
+- antihidetag (admin group only)
+- antinsfw (admin group only)
+
+Contoh:
+${usedPrefix}enable welcome
+${usedPrefix}disable welcome
+`.trim())
+  }
+  m.reply(`
+*${type}* berhasil di *${isEnable ? 'nyala' : 'mati'}kan* ${isAll ? 'untuk bot ini' : isUser ? '' : 'untuk chat ini'}
+`.trim())
+}
+handler.help = ['en', 'dis'].map(v => v + 'able <option>')
+handler.tags = ['group', 'owner']
+handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff))$/i
+
+module.exports = handler
