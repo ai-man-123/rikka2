@@ -33,7 +33,6 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@adiwajshing/baileys": "github:caliph91/baileys",
-    "@adiwajshing/baileys-md": "github:adiwajshing/baileys#multi-device",
     "@vitalets/google-translate-api": "^7.0.0",
     "akaneko": "^5.1.2",
     "anime-quotes-api": "^1.2.0",
@@ -119,7 +118,7 @@
     "translate-google-api": "^1.0.4",
     "translation-google": "^0.2.1",
     "url-regex": "^5.0.0",
-    "wa-sticker-formatter": "github:caliph71/wa-sticker-formatter",
+    "wa-sticker-formatter": "latest",
     "waifu.pics": "^0.0.2",
     "waifur": "^1.0.2",
     "wikijs": "^6.2.3",
