@@ -4,7 +4,7 @@ global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   clph: 'https://recoders-area.caliph.repl.co',
-  caliph: 'https://api.caliph71.xyz',
+  caliph: 'https://api.caliph.my.id',
   nrtm: 'https://nurutomo.herokuapp.com',
   xteam: 'https://api.xteam.xyz',
   lol: 'https://api.lolhuman.xyz',
@@ -12,7 +12,7 @@ global.APIs = { // API Prefix
   
 }
 global.APIKeys = { // APIKey Here
-   'https://api.caliph71.xyz': 'beta',
+   'https://api.caliph.my.id': 'caliphganz',
    'http://api.vhtear.com': 'rikkabotz',
    'https://api.lolhuman.xyz': 'rikkabotz',
   'https://api.xteam.xyz': 'ameysbot'
