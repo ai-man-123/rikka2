@@ -8,8 +8,9 @@ async function handler(m, { command }) {
         case 'leave': {
             let room = Object.values(this.anonymous).find(room => [room.a, room.b].includes(m.sender))
             if (!room) throw 'Kamu tidak sedang berada di anonymous chat'
-            m.reply('Ok')
-            this.sendMessage([room.a, room.b].find(user => user !== m.sender), 'Partner meninggalkan chat😥', MessageType.text)
+            if (command == 'next') m.reply('Tunggu sebentar, sedang mencari partner lain....')
+            if (command == 'leave') m.reply(`Kamu memberhentikan sesi chat ini...`)
+            if ([room.a, room.b].find(user => user !== m.sender)) this.sendMessage([room.a, room.b].find(user => user !== m.sender), 'Partner meninggalkan chat😥', MessageType.text)
             delete this.anonymous[room.id]
             if (command === 'leave') break
         }
@@ -37,7 +38,6 @@ async function handler(m, { command }) {
 }
 handler.help = ['start', 'leave', 'next']
 handler.tags = 'anonymous'
-
 handler.command = ['start', 'leave', 'next']
 handler.private = true
 
