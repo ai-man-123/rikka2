@@ -3,7 +3,7 @@ let moment = require('moment-timezone')
 let handler = async (m, { conn, args, isPrems }) => {
   if (!args[0]) throw 'Uhm...url nya mana?'
   m.reply('Downloading....')
-  let { nowm: nowatermark, video: watermark, audio, preview } = (await require('../lib/musicaldown')(args[0])).result
+  let { nowm: nowatermark, video: watermark, audio, preview } = (await require('../lib/musicaldown')(args[0]))
      try {
   let { diggCount, text, playCount, commentCount, shareCount, createTime, authorMeta } = (await getVideoMeta(args[0])).collector[0]
   let { name, nickName } = authorMeta
