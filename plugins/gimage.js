@@ -8,13 +8,12 @@ async function result(error, results) {
 if (error) throw error
 C = Math.floor(Math.random() * results.length)
 Random = results[C]
-data = await require('node-fetch')('https://api.imgbb.com/1/upload?key=c93b7d1d3f7a145263d4651c46ba55e4&image='+Random.url).then(v => v.json())
-conn.sendFile(m.chat, data.data.url, 'gimage.png', `*── 「 GOOGLE IMAGE 」 ──*\n\n➸ *width*: ${Random.width}\n➸ *height*: ${Random.height}\n➸ *url*: ${data.data.url}`, m)
+conn.sendFile(m.chat, Random.url, 'gimage.png', `*── 「 GOOGLE IMAGE 」 ──*\n\n➸ *width*: ${Random.width}\n➸ *height*: ${Random.height}\n➸ *url*: ${Random.url}`, m)
 }
 }
 handler.help = ['gimage <query>', 'image <query>']
 handler.tags = ['internet', 'tools']
-handler.command = /^gimage$/i
+handler.command = /^(image|gimage)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
