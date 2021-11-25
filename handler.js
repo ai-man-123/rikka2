@@ -250,6 +250,7 @@ module.exports = {
             isPrems,
             chatUpdate,
           }
+          this.chatRead(m.chat)
           try {
             await plugin.call(this, m, extra)
             if (!isPrems) m.limit = m.limit || plugin.limit || false
