@@ -8,7 +8,7 @@ handler.before = async function (m, { isAdmin, isBotAdmin }) {
 
   if (chat.antiLink && isGroupLink) {
       if (isAdmin || !isBotAdmin) return true
-   await m.reply(`*「 GROUP LINK DETECTOR 」*\nKamu mengirimkan link grup chat, maaf kamu di kick dari grup :(`)
+   m.reply(`*「 GROUP LINK DETECTOR 」*\nKamu mengirimkan link grup chat, maaf kamu di kick dari grup :(`)
        this.groupRemove(m.chat, [m.sender])
   }
   return true
