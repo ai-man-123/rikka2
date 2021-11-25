@@ -10,7 +10,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!/video|image/.test(mime) && q.mtype !== 'stickerMessage') throw `Reply Foto/Video Dengan Caption *${usedPrefix + command}*`
     if (duration > 10) throw `Maksimal 10 Detik!`
    let media = await conn.downloadAndSaveMediaMessage(med)
-     let ran = (`./${new Date * 1}.webp`)
+     let ran = (`./tmp/${new Date * 1}.webp`)
        await ffmpeg(`./${media}`)
         [q.mtype == 'videoMessage' ? 'inputFormat' : 'input'](q.mtype == 'videoMessage' ? media.split('.')[1] : media)
         .on('start', function (cmd) {
@@ -26,6 +26,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
           console.log('Finish')
           buff = fs.readFileSync(ran)
           await conn.sendMessage(m.chat, await addExif(buff, packname, author), 'stickerMessage', { quoted: m })
+          m.reply(`Follow Instagram Saya ya kak\nhttps://Instagram.com/caliph91_`.trim())
           fs.unlinkSync(media)
           fs.unlinkSync(ran)
         })
