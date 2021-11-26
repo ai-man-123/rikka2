@@ -9,11 +9,13 @@ let handler = async (m, { conn, args }) => {
   let me = groupMetadata.participants.find(user => user.jid === conn.user.jid)
   if (!me) throw 'Aku tidak ada di grup itu :('
   if (me.isAdmin !== true) throw 'Aku bukan admin T_T'
-  conn.reply(m.chat, `Nih kak link grup *${groupMetadata.subject}*\n\n_Teruskan pesan ini untuk mendapatkan link grup_`, m, { contextInfo: { externalAdReply : {
+  conn.reply(m.chat, `https://chat.whatsapp.com/${await conn.groupInviteCode(group)}\n\nLink Grup ${groupMetadata.subject}`, m, { detectLinks: !-1 })
+  /* conn.reply(m.chat, `Nih kak link grup *${groupMetadata.subject}*\n\n_Teruskan pesan ini untuk mendapatkan link grup_`, m, { contextInfo: { externalAdReply : {
   title: groupMetadata.subject,
   thumbnail: await getBuffer(await conn.getProfilePicture(m.chat)),
   sourceUrl: 'https://chat.whatsapp.com/'+await conn.groupInviteCode(m.chat)
   }}})
+*/
 }
 handler.help = ['linkgroup']
 handler.tags = ['group']
