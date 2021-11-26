@@ -13,7 +13,7 @@ global.APIs = { // API Prefix
 }
 global.APIKeys = { // APIKey Here
    'https://api.caliph.my.id': 'caliphganz',
-   'http://api.vhtear.com': 'rikkabotz',
+   'http://api.vhtear.com': 'rikkachan',
    'https://api.lolhuman.xyz': 'rikkabotz',
   'https://api.xteam.xyz': 'ameysbot'
 }
