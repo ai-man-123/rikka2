@@ -121,7 +121,7 @@ if (opts['test']) {
     process.send(line.trim())
   })
   conn.connect().then(() => {
- conn.sendMessage('62812151994471@c.us', 'Bot Successfully Running', 'conversation');
+ conn.sendMessage(conn.user.jid, 'Bot Successfully Running', 'conversation');
     fs.writeFileSync(authFile, JSON.stringify(conn.base64EncodedAuthInfo(), null, '\t'))
     global.timestamp.connect = new Date
   })
