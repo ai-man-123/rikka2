@@ -1,5 +1,3 @@
-var {WAMessageProto} = require('@adiwajshing/baileys')
-
 let handler = async (m, { conn, text }) => {
 try {
 imeg = await conn.getProfilePicture(conn.user.jid)
@@ -18,16 +16,16 @@ Call / VC Bot = Block
 Spam Bot = Ban + Block
 
 Group Support💬
-https://caliph71.xyz/bc9
+https://chat.whatsapp.com/JXJWLOIdVwh6qL1biGcR7Y
 
 Follow Me❤️
 https://instagram.com/caliph91_
 
 Website
-https://web.caliph71.xyz
+https://caliph.my.id
 
 Rest API 
-https://api.caliph71.xyz
+https://api.caliph.my.id
 `.trim(),    footerText: '🔰 Rikka-Bot By Caliph71🔰',
     buttons: buttons,
   imageMessage: await conn.toMSG({ url: imeg }, 'imageMessage'),
