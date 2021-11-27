@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 let handler = async (m, { conn, text, participants }) => {
   let _participants = participants.map(user => user.jid)
   let users = (await Promise.all(
-    (m.quoted ? m.quoted.sender : text.split(','))
+    (m.quoted ? [m.quoted.sender] : text.split(','))
       .map(v => v.replace(/[^0-9]/g, ''))
       .filter(v => v.length > 4 && v.length < 20 && !_participants.includes(v + '@s.whatsapp.net'))
       .map(async v => [
