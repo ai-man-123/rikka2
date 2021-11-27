@@ -71,9 +71,9 @@ var sDisplay = s > 0 ? s + (s == 1 ? " Seconds,":" Seconds") : ""; return dDispl
 }
 registered = Object.entries(DATABASE.data.users).filter(a => a[1].registered && a[1]).map(a => a[0])
 batere = conn.battery ? conn.battery.value : ''
-conn.setStatus(`Status : ${opts.disable ? 'Una' : 'A'}vailable | Uptime : ${kyun(process.uptime())} | User registered : ${registered.length} | Battery : ${batere}`)
+await conn.setStatus(`Status : ${opts.disable ? 'Una' : 'A'}vailable | Uptime : ${kyun(process.uptime())} | User registered : ${registered.length} | Battery : ${batere}`)
 }
-}, 10 * 1000)
+}, 30 * 1000)
 
 if (opts['test']) {
   conn.user = {
