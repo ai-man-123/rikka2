@@ -10,8 +10,8 @@
     "productivity"
   ],
   "repository": "https://github.com/caliph71/bot-aq",
-  "website": "https://wa.me/6281215199447",
-  "success_url": "https://wa.me/6281215199447",
+  "website": "https://wa.me/60102810046",
+  "success_url": "https://wa.me/60102810046",
   "env": {
     "API_KEY": {
       "description": "Get this value from https://api.xteam.xyz",
@@ -22,7 +22,7 @@
       "required": true
     },
     "OWNER_NUMBER": {
-      "description": "YOUR WHATSAPP NUMBER",
+      "description": "60102810046",
       "required": true
     }
 },
