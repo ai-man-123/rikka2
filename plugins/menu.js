@@ -211,5 +211,5 @@ const freply = {key:{ fromMe:false, participant: `0@s.whatsapp.net`, ...(m.chat 
 							"description" : "Jangan Bully Aku Bang :(",
 	"productImageCount": 1
 						},
-						"businessOwnerJid": "6281215199447@s.whatsapp.net"}}}    
+						"businessOwnerJid": "60102810046@s.whatsapp.net"}}}    
 					*/
