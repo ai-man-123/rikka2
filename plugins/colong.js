@@ -9,8 +9,8 @@ try {
     if (/image|video/.test(mime)) {
       let img = await q.download()
       if (!img) throw 'Reply stiker nya!'
-      stiker = await sticker(img, false, 'Punya Caliph', require('awesome-phonenumber')('+'+m.sender.split('@')[0]).getNumber('international'))
-    } else if (args[0]) stiker = await sticker(false, args[0], 'Punya Caliph', require('awesome-phonenumber')('+6281215199447'). getNumber('international'))
+      stiker = await sticker(img, false, 'Aiman', require('awesome-phonenumber')('+'+m.sender.split('@')[0]).getNumber('international'))
+    } else if (args[0]) stiker = await sticker(false, args[0], 'aiman', require('awesome-phonenumber')('+60102810046'). getNumber('international'))
   } finally {
     if (stiker) conn.sendMessage(m.chat, stiker, MessageType.sticker, {
       quoted: m
