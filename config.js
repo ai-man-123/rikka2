@@ -1,5 +1,5 @@
 const ez = require("node-fetch");
-global.owner = ['62882003806038', '6285162570286', '62878512374103', '6281350386628', '60102810046'] // Put your number here
+global.owner = ['62882003806038', '60102810046', '62895-613293360', '6285774128904'] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
@@ -26,7 +26,7 @@ return array[Math.floor(Math.random() * array.length)]
 // Sticker WM
 global.packname = (`Rikka Bot`)
 global.getBuffer = getBuffer
-global.author = (`https://caliph.my.id`)
+global.author = (`×͜×  亗ᴮᵒᵗ`)
 global.sessionid = '48736705854:2Tq6joffmVDzaS:24'
 global.multiplier = 69 // The higher, The harder levelup
 
