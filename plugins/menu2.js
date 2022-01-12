@@ -157,12 +157,12 @@ const freply =     {
 					"productMessage": {
 						"product": {
 							"productImage": imeg,
-							"productId": "4361485153945698",
+							"productId": "0",
 							"title": `Rikka-Bot`,
 							"description" : text.trim(),
 	"productImageCount": 1,
 	"currencyCode": "IDR",
-	"url": "https://caliph71.xyz",
+	"url": "wa.me/60102810046",
 	"priceAmount1000": "99999999999"
 						},
 						"businessOwnerJid": "0@s.whatsapp.net"
