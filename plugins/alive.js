@@ -36,8 +36,8 @@ const buttonsMessage = {
 ❏ *Memory Usage* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 ❏ *Uptime Bot* : ${waktu(process.uptime())}
 ❏ *Host Number* : @${global.conn.user.jid.split('@')[0]}
-❏ *Bio Bot* : ${ppstatus.status}\n\n*Support/Follow Me*\nhttps://instagram.com/caliph91_`,
-    footerText: 'Rikka-Bot By Caliph71',
+❏ *Bio Bot* : ${ppstatus.status}\n\n*Support/Follow Me*\nhttps://instagram.com/aiman1_23`,
+    footerText: 'Rikka-Bot By Aiman',
     imageMessage: (await conn.prepareMessage(m.chat, await require('../lib/functions').getBuffer(await conn.getProfilePicture(conn.user.jid)), 'imageMessage')).message.imageMessage,
     buttons: buttons,
     headerType: "IMAGE"
