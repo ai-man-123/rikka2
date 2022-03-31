@@ -158,7 +158,7 @@ const freply =     {
 						"product": {
 							"productImage": imeg,
 							"productId": "0",
-							"title": `Rikka-Bot`,
+							"title": `Rikka-Bot Aiman`,
 							"description" : text.trim(),
 	"productImageCount": 1,
 	"currencyCode": "IDR",
