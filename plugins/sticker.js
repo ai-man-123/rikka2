@@ -26,7 +26,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
           console.log('Finish')
           buff = fs.readFileSync(ran)
           await conn.sendMessage(m.chat, await addExif(buff, packname, author), 'stickerMessage', { quoted: m })
-          m.reply(`Follow Instagram Saya ya kak\nhttps://Instagram.com/caliph91_`.trim())
+          m.reply(`Follow Instagram Saya ya kak\nhttps://Instagram.com/aiman1_23`.trim())
           fs.unlinkSync(media)
           fs.unlinkSync(ran)
         })
