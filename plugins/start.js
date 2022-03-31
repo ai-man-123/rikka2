@@ -5,9 +5,9 @@ imeg = await conn.getProfilePicture(conn.user.jid)
 imeg = 'https://telegra.ph/file/06f39d57bd620ddcca93d.png'
 }
  let buttons = [
-  {buttonId: '/bantuan', buttonText: {displayText: 'LIST MENU'}, type: 1},
-  {buttonId: '/info', buttonText: {displayText: 'STATUS BOT'}, type: 1},
-   {buttonId: '/owner', buttonText: {displayText: 'OWNER BOT'}, type: 1}
+  {buttonId: '/bantuan', buttonText: {displayText: 'LIST MENUメ'}, type: 1},
+  {buttonId: '/info', buttonText: {displayText: 'STATUS BOTメ'}, type: 1},
+   {buttonId: '/owner', buttonText: {displayText: 'OWNER BOTメ'}, type: 1}
 ]
 const buttonsMessage = {
     contentText: `Hai ${conn.getName(m.sender)}
@@ -15,18 +15,15 @@ const buttonsMessage = {
 Call / VC Bot = Block
 Spam Bot = Ban + Block
 
-Group Support💬
-https://chat.whatsapp.com/JXJWLOIdVwh6qL1biGcR7Y
-
 Follow Me❤️
-https://instagram.com/caliph91_
+https://instagram.com/aiman1_23
 
 Website
-https://caliph.my.id
+https://s.id/aimaN
 
 Rest API 
 https://api.caliph.my.id
-`.trim(),    footerText: '🔰 Rikka-Bot By Caliph71🔰',
+`.trim(),    footerText: '🔰 Rikka-Bot By ꋬ꒐ꂵꋬꋊ メ *͘⁴̅⁰͍⁴̵🔰',
     buttons: buttons,
   imageMessage: await conn.toMSG({ url: imeg }, 'imageMessage'),
   headerType: 'IMAGE'
