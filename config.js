@@ -1,5 +1,5 @@
 const ez = require("node-fetch");
-global.owner = ['62882003806038', '60102810046', '62895-613293360', '6285774128904'] // Put your number here
+global.owner = ['62882003806038', '60102810046', '0'] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
